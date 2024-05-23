@@ -2147,10 +2147,9 @@ function Now () {
     Start()
 }
 function Hi () {
-    game.splash("Keyboard Controls")
-    game.showLongText("Up button: Jump\\nRight Button: Move to Right\\nLeft Button: Move to Left\\nButton B: Change Character", DialogLayout.Full)
+    game.showLongText("Use keyboard to play lol\nKeyboard Controls\nSpacebar: Button A\nUp button: Jump\\nRight Button: Move to Right\\nLeft Button: Move to Left\\nButton B: Change Character", DialogLayout.Full)
     game.splash("Hi player!", "Welcome to the adventure!")
-    story.showPlayerChoices("Start Now", "How To Play")
+    story.showPlayerChoices("How To Play", "Start Now")
     if (story.checkLastAnswer("Start Now")) {
         Now()
     } else if (story.checkLastAnswer("How To Play")) {
