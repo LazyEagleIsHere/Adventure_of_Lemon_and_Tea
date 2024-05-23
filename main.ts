@@ -683,9 +683,7 @@ function HowToPlay () {
         ................................................................................................................................................................
         ................................................................................................................................................................
         `)
-    game.splash("First", "Keyboard Controls")
-    game.showLongText("Up button: Jump\\nRight Button: Move to Right\\nLeft Button: Move to Left\\nButton B: Change Character", DialogLayout.Center)
-    game.splash("Second")
+    game.splash("First")
     for (let index = 0; index < 2; index++) {
         scene.setBackgroundImage(img`
             ................................................................................................................................................................
@@ -1056,7 +1054,7 @@ function HowToPlay () {
         ................................................................................................................................................................
         ................................................................................................................................................................
         `)
-    game.splash("Third")
+    game.splash("Second")
     for (let index = 0; index < 2; index++) {
         scene.setBackgroundImage(img`
             ................................................................................................................................................................
@@ -2149,6 +2147,8 @@ function Now () {
     Start()
 }
 function Hi () {
+    game.splash("Keyboard Controls")
+    game.showLongText("Up button: Jump\\nRight Button: Move to Right\\nLeft Button: Move to Left\\nButton B: Change Character", DialogLayout.Center)
     game.splash("Hi player!", "Welcome to the adventure!")
     story.showPlayerChoices("Start Now", "How To Play")
     if (story.checkLastAnswer("Start Now")) {
