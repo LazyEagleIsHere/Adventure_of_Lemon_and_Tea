@@ -2018,8 +2018,9 @@ function Now () {
         `)
     Start()
 }
-function Hi () {
-    game.showLongText("Welcome To SMS Adventure Game!\\nKeyboard Controls\\nSpacebar: Button A and Jump\\nRight Button: Move to Right\\nLeft Button: Move to Left\\nButton B: Change Character", DialogLayout.Full)
+function Hi() {
+    game.showLongText("Welcome To SMS Adventure Game\nPress Spacebar To Continue", DialogLayout.Full)
+    game.showLongText("Keyboard Controls\\nSpacebar: Button A and Jump\\nRight Button: Move to Right\\nLeft Button: Move to Left\\nButton B: Change Character", DialogLayout.Full)
     game.showLongText("If you do not know how to play, please read the instructions", DialogLayout.Full)
     story.showPlayerChoices("Start Now", "How To Play")
     if (story.checkLastAnswer("Start Now")) {
