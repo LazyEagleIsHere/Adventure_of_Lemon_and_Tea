@@ -2148,7 +2148,7 @@ function Now () {
 }
 function Hi () {
     game.showLongText("Use keyboard to play lol\nKeyboard Controls\nSpacebar: Button A\nUp button: Jump\\nRight Button: Move to Right\\nLeft Button: Move to Left\\nButton B: Change Character", DialogLayout.Full)
-    game.showLongText("If you do not know how to play, please read the instructions")
+    game.showLongText("If you do not know how to play, please read the instructions", DialogLayout.Full)
     story.showPlayerChoices("How To Play", "Start Now")
     if (story.checkLastAnswer("Start Now")) {
         Now()
