@@ -6,9 +6,9 @@ enum ActionKind {
 namespace SpriteKind {
     export const WallUpdateTrigger = SpriteKind.create()
 }
-controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (resquest) {
-        game.reset()
+
     } else {
         if (active_player_sprite == Lemon) {
             if (Lemon.vy == 0) {
@@ -216,11 +216,12 @@ function showScore () {
     }
     game.splash("Level " + (current_level + 1), "" + button_presses + " " + press_text)
 }
-function Start () {
+function Start() {
     resquest = false
     current_level = 0
+    scene.setBackgroundImage(assets.image`SMS logo`)
     levels = [
-    tiles.createMap(tilemap`level2`),
+    tiles.createMap(tilemap`level1`),
     tiles.createMap(tilemap`level3`),
     tiles.createMap(tilemap`level4`),
     tiles.createMap(tilemap`level5`),
@@ -234,7 +235,7 @@ function Start () {
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     if (resquest) {
-        game.reset()
+        
     } else {
         if (active_player_sprite == Lemon) {
             animation.runImageAnimation(
@@ -1449,7 +1450,7 @@ function scheduleWallUpdate () {
 }
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (resquest) {
-        game.reset()
+        
     } else {
         if (active_player_sprite == Lemon) {
             animation.runImageAnimation(
@@ -2147,9 +2148,9 @@ function Now () {
     Start()
 }
 function Hi () {
-    game.showLongText("Use keyboard to play lol\nKeyboard Controls\nSpacebar: Button A\nUp button: Jump\\nRight Button: Move to Right\\nLeft Button: Move to Left\\nButton B: Change Character", DialogLayout.Full)
+    game.showLongText("Use keyboard to play lol\\nKeyboard Controls\\nSpacebar: Button A and Jump\\nRight Button: Move to Right\\nLeft Button: Move to Left\\nButton B: Change Character", DialogLayout.Full)
     game.showLongText("If you do not know how to play, please read the instructions", DialogLayout.Full)
-    story.showPlayerChoices("How To Play", "Start Now")
+    story.showPlayerChoices("Start Now", "How To Play")
     if (story.checkLastAnswer("Start Now")) {
         Now()
     } else if (story.checkLastAnswer("How To Play")) {
